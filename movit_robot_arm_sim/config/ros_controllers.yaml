@@ -20,7 +20,7 @@ ver5_bokhop:
       - joint_3
       - joint_4
   gains:
-    joint1: {p: 1.0, i: 0.0, d: 0.1}
-    joint2: {p: 1.0, i: 0.0, d: 0.1}
-    joint3: {p: 1.0, i: 0.0, d: 0.1}
+    joint1: {p: 10.0, i: 0.0, d: 0.0}
+    joint2: {p: 10.0, i: 0.0, d: 0.0}
+    joint3: {p: 10.0, i: 0.0, d: 0.0}
   
