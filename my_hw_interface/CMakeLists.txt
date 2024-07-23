@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   controller_manager
+  moveit_ros_planning_interface
 )
 
 ## System dependencies are found with CMake's conventions
@@ -140,6 +141,16 @@ include_directories(
 
 add_executable(robot_hwi_node src/robot_hwi_node.cpp)
 target_link_libraries(robot_hwi_node
+  ${catkin_LIBRARIES}
+)
+
+add_executable(robot_arm_jointspace scripts/robot_arm_jointspace.cpp)
+target_link_libraries(robot_arm_jointspace
+  ${catkin_LIBRARIES}
+)
+
+add_executable(robot_arm_cartesian scripts/robot_arm_cartesian.cpp)
+target_link_libraries(robot_arm_cartesian
   ${catkin_LIBRARIES}
 )
 

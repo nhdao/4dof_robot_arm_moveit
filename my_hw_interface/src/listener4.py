@@ -79,15 +79,17 @@ publisher1 = rospy.Publisher(topicName, degree_msg, queue_size = 1)
 subsciber1 = rospy.Subscriber(moveitTopicName, rad_msg, callBackFunc)
 
 while not rospy.is_shutdown():
-	publisher1.publish(total_data)
-	rospy.loginfo(total_data)
-	rospy.loginfo(messageCount)
-	messageCount += 1
+	if(total_data_prev.joint1 != total_data.joint1 or total_data_prev.joint2 != total_data.joint2
+	or total_data_prev.joint3 != total_data.joint3 or total_data_prev.joint4 != total_data.joint4 
+	or total_data_prev.joint4 != total_data.joint4):
+		publisher1.publish(total_data)
+		rospy.loginfo(total_data)
+		rospy.loginfo(messageCount)
+		messageCount += 1
 
-	total_data_prev.joint1 = total_data.joint1
-	total_data_prev.joint2 = total_data.joint2
-	total_data_prev.joint3 = total_data.joint3
-	total_data_prev.joint4 = total_data.joint4
-	total_data_prev.joint5 = total_data.joint5
-	
+		total_data_prev.joint1 = total_data.joint1
+		total_data_prev.joint2 = total_data.joint2
+		total_data_prev.joint3 = total_data.joint3
+		total_data_prev.joint4 = total_data.joint4
+		total_data_prev.joint5 = total_data.joint5
 	rate.sleep()

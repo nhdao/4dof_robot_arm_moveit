@@ -38,17 +38,17 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Acceleration_Scaling_Factor: 0.1
+    - Acceleration_Scaling_Factor: 0.01
       Class: moveit_rviz_plugin/MotionPlanning
       Enabled: true
       Move Group Namespace: ""
       MoveIt_Allow_Approximate_IK: false
       MoveIt_Allow_External_Program: false
       MoveIt_Allow_Replanning: false
-      MoveIt_Allow_Sensor_Positioning: false
+      MoveIt_Allow_Sensor_Positioning: true
       MoveIt_Planning_Attempts: 10
       MoveIt_Planning_Time: 5
-      MoveIt_Use_Cartesian_Path: false
+      MoveIt_Use_Cartesian_Path: true
       MoveIt_Use_Constraint_Aware_IK: false
       MoveIt_Workspace:
         Center:
@@ -187,7 +187,7 @@ Visualization Manager:
         Show Robot Collision: false
         Show Robot Visual: true
       Value: true
-      Velocity_Scaling_Factor: 0.1
+      Velocity_Scaling_Factor: 0.01
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -262,9 +262,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: -0.5315936803817749
-        Y: -0.1217251569032669
-        Z: 0.5443487763404846
+        X: -0.30381932854652405
+        Y: -0.14297041296958923
+        Z: 0.18309932947158813
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
